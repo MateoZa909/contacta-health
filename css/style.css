@@ -135,6 +135,10 @@ nav {
     cursor: pointer;
 }
 
+.icon-logout {
+    cursor: pointer;
+}
+
 /* Icono girado hacia arriba */
 .rotate {
     transform: rotate(180deg); /* Ajusta el ángulo de rotación según sea necesario */
