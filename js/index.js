@@ -1,6 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector('.tablinks').click();
-});
+document.querySelectorAll('.tablinks');
 
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
@@ -20,11 +18,22 @@ function openTab(evt, tabName) {
 const cards = document.querySelectorAll('.card');
 cards.forEach((button) => { // Cambié 'buttons' a 'button' para mejor claridad
     button.addEventListener('click', () => {
-        window.location.href = '/views/detalles.html'
+        window.location.href = 'detalles.html'
     });
 });
 
-const backToHome = document.querySelector('.back-arrow');
-backToHome.addEventListener('click', () => {
-    window.location.href = '/views/index.html'
-})
+ // Función para abrir y cerrar el contenedor de cambio de contraseña
+document.querySelector('.icon-logout').addEventListener('click', function() {
+    var container = document.querySelector('.changePass-logout');
+    var icon = document.querySelector('.icon-logout');
+    if (!container.classList.contains('open')) {
+        container.classList.add('open');
+        icon.classList.add('rotate');
+    } else {
+        container.classList.remove('open');
+        icon.classList.remove('rotate');
+    }
+});
+
+
+

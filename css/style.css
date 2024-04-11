@@ -35,10 +35,13 @@ nav {
 .back-logo-user {
     /* background-color: lightcoral; */
     /* width: 100%; */
+    width: 140px;
     height: 80px;
     margin: 5px 5px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    position: relative;
     /* padding: 5px 5px; */
 }
 
@@ -54,12 +57,13 @@ nav {
 /* *********************** */
 /* CONTENEDOR USUARIO */
 .text-image {
-    width: 110px;
+    width: 150px;
     border-left: 2px solid #696969;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
+    /* background-color: lightcyan; */
 }
 
 .image-user {
@@ -71,6 +75,72 @@ nav {
 /* CONTENEDOR USUARIO */
 /* *********************** */
 /* BARRA DE NAVEGACION */
+
+
+/* MODAL CAMBIAR Y CERRAR SESIÒN */
+.changePass-logout {
+    background-color: rgb(233, 233, 233);
+    position: absolute;
+    top: 78%;
+    right: 10%;
+    width: 170px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 8px 8px;
+    gap: 5px;
+    box-shadow: 1px 2px 12px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease;
+
+    /* ANIMACION */
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0; /* Elimina cualquier relleno que pueda agregar espacio adicional */
+    margin: 0; /* Elimina cualquier margen que pueda agregar espacio adicional */
+}
+
+.changePass-logout.open {
+    display: flex;
+    padding: 10px 8px;
+    max-height: 200px; /* Altura máxima que desees para la animación */
+}
+
+.changePass-logout .box {
+    display: flex;
+    /* background-color: lightgreen; */
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.changePass-logout .box:active {
+    background-color: #c9c9c9;
+    border-radius: 8px;
+}
+
+.changePass-logout .box p {
+    font-size: 14px;
+}
+
+.changePass-logout img {
+    width: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+/* Icono girado hacia arriba */
+.rotate {
+    transform: rotate(180deg); /* Ajusta el ángulo de rotación según sea necesario */
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+/* MODAL CAMBIAR Y CERRAR SESIÒN */
 
 /* BACKGROUND  */
 .background {
@@ -85,6 +155,7 @@ nav {
     height: 850px;
     width: 100%;
     z-index: 1;
+    padding: 0 10px;
 }
 
 .background .welcome-name {
@@ -126,11 +197,13 @@ nav {
 
 /* SERVICIOS */
 .services {
-    margin: 0 10px;
+    margin: 15px 10px;
     height: 100vh;
     padding: 40px;
-    margin-top: 20px;
+    padding: 10px 10px;
     /* background-color: rgb(40, 42, 43); */
+    align-items: center;
+    justify-content: center;
     display: grid;
     grid-template-columns: 350px;
     width: 100%;
